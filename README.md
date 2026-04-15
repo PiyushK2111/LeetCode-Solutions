@@ -14,20 +14,6 @@ In this repository, I document my daily practice of solving problems on LeetCode
 
 ---
 
-📂 Repository Structure
-
-Each problem is organized in its own folder:
-
-LeetCode-Solutions/
-│
-├── 9-Palindrome-Number/
-│   ├── solution.java
-│   └── README.md
-* solution.java → Contains the LeetCode solution
-* README.md → Contains explanation, approach, and test cases
-
----
-
 ## 📊 Progress Tracker
 
 Total Problems Solved: 0

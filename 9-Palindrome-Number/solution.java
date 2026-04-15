@@ -3,7 +3,7 @@ class Solution {
         int reversed = 0;
         int original = number;
 
-        if (number < 0) {
+        if (number < 0) { 
             return false;
         }
 

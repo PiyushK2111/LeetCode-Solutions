@@ -5,7 +5,7 @@ In this repository, I document my daily practice of solving problems on LeetCode
 
 ---
 
-## 🎯 Goal
+## 🎯 Goal 
 
 * Solve **at least one problem every day**
 * Improve problem-solving and DSA skills

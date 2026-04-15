@@ -75,10 +75,4 @@ If you find this repository helpful:
 
 ---
 
-## 📅 Started On
-
-April 2026
-
----
-
 ### 🚀 Keep Coding. Keep Growing. Be a force for Good.

@@ -1,4 +1,4 @@
-# 🔢 9 Palindrome Number (LeetCode)
+# 🔢 9. Palindrome Number (LeetCode)
 
 ## 🧩 Problem
 

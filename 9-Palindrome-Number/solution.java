@@ -9,7 +9,7 @@ class Solution {
 
         while (number != 0) {
             reversed = (reversed * 10) + number % 10;
-            number /= 10;
+            number /= 10;    
         }
 
         if (reversed == original) {

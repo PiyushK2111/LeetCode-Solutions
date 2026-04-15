@@ -10,24 +10,62 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Count problem folders
-        id: count
+      - name: Generate table
         run: |
-          count=$(find . -maxdepth 1 -type d -name "*-*" | wc -l)
-          echo "count=$count" >> $GITHUB_OUTPUT
+          total=0
+          table="| # | Problem Name |\n|---|-------------|\n"
+
+          for dir in */ ; do
+            folder=${dir%/}
+
+            # Skip .github folder
+            if [[ "$folder" == ".github" ]]; then
+              continue
+            fi
+
+            if [[ $folder == *-* ]]; then
+              number=$(echo $folder | cut -d'-' -f1)
+              name=$(echo $folder | cut -d'-' -f2-)
+
+              # Replace hyphens with spaces
+              problem_name=$(echo $name | tr '-' ' ')
+
+              table+="| $number | $problem_name |\n"
+              ((total++))
+            fi
+          done
+
+          echo "TOTAL=$total" >> $GITHUB_ENV
+          echo -e "$table" > table.txt
 
       - name: Update README
         run: |
-          sed -i "s/Total Problems Solved: .*/Total Problems Solved: ${{ steps.count.outputs.count }}/" README.md
+          awk -v total="$TOTAL" '
+          BEGIN {found=0}
+          /Total Problems Solved:/ {
+            print "Total Problems Solved: " total
+            next
+          }
+          /## 📚 Problems List/ {
+            print
+            getline
+            while(getline && $0 !~ /^$/){}
+            system("cat table.txt")
+            found=1
+            next
+          }
+          {print}
+          ' README.md > temp.md
+
+          mv temp.md README.md
 
       - name: Commit changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add README.md
-          git commit -m "Updated problem count" || echo "No changes"
+          git commit -m "Auto update README" || echo "No changes"
           git push
-

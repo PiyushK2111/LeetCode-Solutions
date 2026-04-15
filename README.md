@@ -14,20 +14,17 @@ In this repository, I document my daily practice of solving problems on LeetCode
 
 ---
 
-## 📂 Repository Structure
+📂 Repository Structure
 
 Each problem is organized in its own folder:
 
-```
 LeetCode-Solutions/
 │
 ├── 9-Palindrome-Number/
 │   ├── solution.java
 │   └── README.md
-```
-
-* `solution.java` → Contains the LeetCode solution
-* `README.md` → Contains explanation, approach, and test cases
+* solution.java → Contains the LeetCode solution
+* README.md → Contains explanation, approach, and test cases
 
 ---
 
@@ -65,7 +62,7 @@ Total Problems Solved: 0
 Example:
 
 ```
-https://leetcode.com/your-username
+https://leetcode.com/Piyush5972/
 ```
 
 ---
@@ -73,14 +70,6 @@ https://leetcode.com/your-username
 ## 🔥 Motivation
 
 > "Consistency beats talent when talent doesn't show up daily."
-
----
-
-## 📸 Preview
-
-### Example Problem Structure
-
-![Folder Structure](https://via.placeholder.com/800x300.png?text=LeetCode+Repository+Structure)
 
 ---
 
@@ -106,4 +95,4 @@ April 2026
 
 ---
 
-### 🚀 Keep Coding. Keep Growing.
+### 🚀 Keep Coding. Keep Growing. Be a force for Good.
